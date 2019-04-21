@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'Installing the project'
+      - mvn clean install
+  build:
+    commands:
+      - mvn package
+artifacts:
+  files:
+    - helloworld.jar
+  name: hello-world
+  discard-paths: yes
+  base-directory: target
